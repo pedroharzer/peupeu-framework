@@ -1,0 +1,275 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+}
+main {
+	margin-top: 5rem;
+}
+.main-header {
+	background: cyan;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	transition: 0.5s background ease-in-out;
+}
+.header-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo-container {
+	margin: 1% 2%;
+}
+.logo {
+	color: black;
+	font-size: 2.5rem;
+	text-decoration: none;
+}
+.main-nav {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	opacity: 0;
+	height: 0;
+	width: 100%;
+	transition: 0.3s opacity ease-in, 0.4s height ease-in-out;
+}
+.nav-itens {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+}
+.nav-item {
+	margin: 0 2rem;
+	margin-bottom: 1rem;
+}
+.nav-link {
+	color: #969696;
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+.button-container {
+	margin: 1rem 0.2rem;
+}
+.toggle-button {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding-bottom: 0;
+	padding-top: 0;
+	outline: none;
+	width: 3rem;
+}
+.toggle-button__bar {
+	height: 0.2rem;
+	width: 100%;
+	background: black;
+	display: block;
+	margin: 0.6rem 0;
+	transition: 0.5s background ease-in-out;
+}
+.shadow-box {
+	box-shadow: 10px 3px 3px #858282;
+}
+.flex-container {
+	display: flex;
+}
+.flex-cl-center {
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.flex-rw-center {
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+/* toggle nav-mobile */
+.nav-toggle {
+	opacity: 1;
+	height: 20vh;
+	width: 100%;
+}
+/* media queries */
+@media (min-width: 40rem) {
+	.nav-item {
+		font-size: 1.5rem;
+		margin: 1rem 2rem;
+	}
+}
+@media (min-width: 65rem) {
+	.button-container {
+		display: none;
+	}
+	.main-nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		opacity: initial;
+		height: initial;
+		width: initial;
+	}
+	.nav-itens {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.nav-item {
+		margin: 0 2rem;
+	}
+}
+/* colors */
+.bg-amarelo {
+	background-color: #ffff5e;
+}
+.bg-amarelo-claro {
+	background-color: #e5edb7;
+}
+.bg-vinho {
+	background-color: #bb0e0e;
+}
+.bg-laranja {
+	background-color: #f0a500;
+}
+.bg-vermelho-pastel {
+	background-color: #ff4b5c;
+}
+.bg-branco {
+	background-color: #f1f3f8;
+}
+.bg-azul-escuro {
+	background-color: #056676;
+}
+.bg-azul-claro {
+	background-color: #a3d2ca;
+}
+.bg-azul {
+	background-color: #5eaaa8;
+}
+.bg-ciano {
+	background-color: #00bcd4;
+}
+.bg-preto {
+	background-color: #1a1c20;
+}
+.bg-salmao {
+	background-color: #ff7171;
+}
+.bg-verde-claro {
+	background-color: #bfdcae;
+}
+.bg-oliva {
+	background-color: #81b214;
+}
+.bg-roxo {
+	background-color: #8675a9;
+}
+.bg-bege {
+	background-color: #f7d6bf;
+}
+.bg-rosa {
+	background-color: #fe91ca;
+}
+.bg-pink {
+	background-color: #fa26a0;
+}
+.bg-rosa-claro {
+	background-color: #e5cfe5;
+}
+.tc-preto {
+	color: black;
+}
+.tc-branco {
+	color: white;
+}
+.tc-amarelo {
+	color: #ffff5e;
+}
+.tc-amarelo-claro {
+	color: #e5edb7;
+}
+.tc-vinho {
+	color: #bb0e0e;
+}
+.tc-laranja {
+	color: #f0a500;
+}
+.tc-vermelho {
+	color: #ff4b5c;
+}
+.tc-azul-escuro {
+	color: #056676;
+}
+.tc-azul-claro {
+	color: #a3d2ca;
+}
+.tc-oliva {
+	color: #81b214;
+}
+.tc-verde-claro {
+	color: #bfdcae;
+}
+.tc-roxo {
+	color: #8675a9;
+}
+.tc-bege {
+	color: #f7d6bf;
+}
+.tc-rosa {
+	color: #fe91ca;
+}
+.tc-rosa-claro {
+	color: #e5cfe5;
+}
+/* change color header  */
+.nav-link__change {
+	border-bottom: 1px solid #212529;
+	color: white;
+}
+.button-change {
+	background: white;
+}
+.header-change {
+	background: black;
+}
+.logo__text-change {
+	color: white;
+}
+footer {
+	box-sizing: content-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: auto;
+	min-height: 50px;
+	padding: 1rem;
+	text-align: center;
+}
+.footer-itens {
+	list-style: none;
+}
+.footer-item {
+	margin: 0.5rem 0;
+}
+.footer-item:last-of-type {
+	margin-bottom: 0;
+}
+.footer-link {
+	color: black;
+	font-size: 1rem;
+	text-decoration: none;
+}
