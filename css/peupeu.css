@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;1,500&display=swap');
 * {
 	box-sizing: border-box;
 }
@@ -10,8 +11,12 @@ body {
 main {
 	margin-top: 5rem;
 }
+p{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
+}
 .main-header {
-	background: cyan;
+	background: white;
 	position: fixed;
 	width: 100%;
 	left: 0;
@@ -29,7 +34,10 @@ main {
 }
 .logo {
 	color: black;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 2.5rem;
+	font-style: italic;
+	font-weight: bolder;
 	text-decoration: none;
 }
 .main-nav {
@@ -41,6 +49,7 @@ main {
 	opacity: 0;
 	height: 0;
 	width: 100%;
+	text-align: center;
 	transition: 0.3s opacity ease-in, 0.4s height ease-in-out;
 }
 .nav-itens {
@@ -54,7 +63,10 @@ main {
 }
 .nav-link {
 	color: #969696;
-	font-size: 1.2rem;
+	font-family: 'Montserrat', sans-serif;
+	font-style: italic;
+	font-weight: lighter;
+	font-size: 1.6rem;
 	text-decoration: none;
 }
 .button-container {
@@ -92,6 +104,38 @@ main {
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
+}
+.center-padding{
+	padding: 0 3rem;
+	text-align: center
+}
+footer {
+	box-sizing: content-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: auto;
+	min-height: 50px;
+	padding: 1rem;
+	text-align: center;
+}
+.footer-itens {
+	list-style: none;
+}
+.footer-item {
+	font-family: 'Montserrat', sans-serif;
+	margin: 0.5rem 0;
+}
+.footer-item:last-of-type {
+	margin-bottom: 0;
+}
+.footer-link {
+	color: black;
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+.footer-link:hover{
+	font-size: 1.3rem;
 }
 /* toggle nav-mobile */
 .nav-toggle {
@@ -149,7 +193,7 @@ main {
 	background-color: #ff4b5c;
 }
 .bg-branco {
-	background-color: #f1f3f8;
+	background-color: white;
 }
 .bg-azul-escuro {
 	background-color: #056676;
@@ -164,7 +208,7 @@ main {
 	background-color: #00bcd4;
 }
 .bg-preto {
-	background-color: #1a1c20;
+	background-color: black;
 }
 .bg-salmao {
 	background-color: #ff7171;
@@ -249,27 +293,4 @@ main {
 .logo__text-change {
 	color: white;
 }
-footer {
-	box-sizing: content-box;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-top: auto;
-	min-height: 50px;
-	padding: 1rem;
-	text-align: center;
-}
-.footer-itens {
-	list-style: none;
-}
-.footer-item {
-	margin: 0.5rem 0;
-}
-.footer-item:last-of-type {
-	margin-bottom: 0;
-}
-.footer-link {
-	color: black;
-	font-size: 1rem;
-	text-decoration: none;
-}
+
