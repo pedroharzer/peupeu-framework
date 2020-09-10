@@ -11,7 +11,7 @@ body {
 main {
 	margin-top: 5rem;
 }
-p{
+p {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6rem;
 }
@@ -22,6 +22,7 @@ p{
 	left: 0;
 	top: 0;
 	transition: 0.5s background ease-in-out;
+	z-index: 100;
 }
 .header-wrapper {
 	display: flex;
@@ -105,9 +106,18 @@ p{
 	align-items: center;
 	justify-content: center;
 }
-.center-padding{
+.center-padding {
 	padding: 0 3rem;
-	text-align: center
+	text-align: center;
+}
+.element-transition {
+	opacity: 0;
+	transform: translateX(5px);
+	transition: 0.5s all ease-in-out;
+}
+.element-appear {
+	opacity: 1;
+	transform: translateX(0px);
 }
 footer {
 	box-sizing: content-box;
@@ -134,7 +144,7 @@ footer {
 	font-size: 1.2rem;
 	text-decoration: none;
 }
-.footer-link:hover{
+.footer-link:hover {
 	font-size: 1.3rem;
 }
 /* toggle nav-mobile */
@@ -293,4 +303,3 @@ footer {
 .logo__text-change {
 	color: white;
 }
-
