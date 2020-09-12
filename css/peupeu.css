@@ -51,7 +51,7 @@ p {
 	height: 0;
 	width: 100%;
 	text-align: center;
-	transition: 0.3s opacity ease-in, 0.4s height ease-in-out;
+	transition: 0.2s opacity ease-in, 0.4s height ease-in-out;
 }
 .nav-itens {
 	display: flex;
@@ -107,17 +107,26 @@ p {
 	justify-content: center;
 }
 .center-padding {
-	padding: 0 3rem;
+	padding: 0 10rem;
 	text-align: center;
 }
-.element-transition {
+.element-transition-x {
 	opacity: 0;
 	transform: translateX(5px);
 	transition: 0.5s all ease-in-out;
 }
-.element-appear {
+.element-transition-y {
+	opacity: 0;
+	transform: translateY(5px);
+	transition: 0.5s all ease-in-out;
+}
+.element-appear-x {
 	opacity: 1;
 	transform: translateX(0px);
+}
+.element-appear-y {
+	opacity: 1;
+	transform: translateY(0px);
 }
 footer {
 	box-sizing: content-box;
@@ -302,4 +311,42 @@ footer {
 }
 .logo__text-change {
 	color: white;
+}
+/* padding lados */
+
+.pl-2 {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+.pl-3 {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+.pl-4 {
+	padding-left: 4rem;
+	padding-right: 4rem;
+}
+.pl-5 {
+	padding-left: 5rem;
+	padding-right: 5rem;
+}
+.pl-6 {
+	padding-left: 6rem;
+	padding-right: 6rem;
+}
+.pl-7 {
+	padding-left: 7rem;
+	padding-right: 7rem;
+}
+.pl-8 {
+	padding-left: 8rem;
+	padding-right: 8rem;
+}
+.pl-9 {
+	padding-left: 9rem;
+	padding-right: 9rem;
+}
+.pl-10 {
+	padding-left: 10rem;
+	padding-right: 10rem;
 }

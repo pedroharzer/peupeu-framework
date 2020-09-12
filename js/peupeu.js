@@ -1,7 +1,8 @@
 let mobileButton = $('.toggle-button');
 let mobileNav = $('.main-nav');
 let target = document.querySelector('.changeTarget');
-let element = document.querySelectorAll('.element-transition');
+let elementX = document.querySelectorAll('.element-transition-x');
+let elementY = document.querySelectorAll('.element-transition-y');
 let elementsPos = [];
 function changeHeader() {
 	let header = $('.main-header');
@@ -30,21 +31,6 @@ function changeHeader() {
 		navLinks.removeClass('nav-link__change');
 	}
 }
-function appearElement() {
-	let scrPos = window.innerHeight;
-	for (let i = 0; i < element.length; i++) {
-		elementsPos.push(element[i].getBoundingClientRect().top / 0.8);
-	}
-	for (let j = 0; j < element.length; j++) {
-		// console.log('element:' + elementsPos[j]);
-		// console.log('scrpos: ' + scrPos);
-		if (elementsPos[j] < scrPos) {
-			element[j].classList.add('element-appear');
-			// console.log('ELEMENTO ESTÁ NA POSIÇÃO');
-		}
-	}
-	elementsPos = [];
-}
 mobileButton.click(function() {
 	//mobile nav toggle
 	mobileNav.toggleClass('nav-toggle');
@@ -53,6 +39,37 @@ if (target) {
 	//check if target exists, if so, exec changeHeader color
 	document.addEventListener('scroll', changeHeader);
 }
-if (element) {
-	document.addEventListener('scroll', appearElement);
+if (elementX) {
+	document.addEventListener('scroll', function() {
+		let scrPos = window.innerHeight;
+		for (let i = 0; i < elementX.length; i++) {
+			elementsPos.push(elementX[i].getBoundingClientRect().top / 0.8);
+		}
+		for (let j = 0; j < elementX.length; j++) {
+			// console.log('element:' + elementsPos[j]);
+			// console.log('scrpos: ' + scrPos);
+			if (elementsPos[j] < scrPos) {
+				elementX[j].classList.add('element-appear-x');
+				// console.log('ELEMENTO ESTÁ NA POSIÇÃO');
+			}
+		}
+		elementsPos = [];
+	});
+}
+if (elementY) {
+	document.addEventListener('scroll', function() {
+		let scrPos = window.innerHeight;
+		for (let i = 0; i < elementY.length; i++) {
+			elementsPos.push(elementY[i].getBoundingClientRect().top / 0.8);
+		}
+		for (let j = 0; j < elementY.length; j++) {
+			// console.log('element:' + elementsPos[j]);
+			// console.log('scrpos: ' + scrPos);
+			if (elementsPos[j] < scrPos) {
+				elementY[j].classList.add('element-appear-y');
+				// console.log('ELEMENTO ESTÁ NA POSIÇÃO');
+			}
+		}
+		elementsPos = [];
+	});
 }
